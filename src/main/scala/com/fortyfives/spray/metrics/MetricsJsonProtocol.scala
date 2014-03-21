@@ -3,7 +3,7 @@ package com.fortyfives.spray.metrics
 import spray.json._
 import com.codahale.metrics.{Gauge, Counter, Meter, Histogram, Timer}
 
-trait MetricsJsonProtocol {
+trait MetricsJsonProtocol extends DefaultJsonProtocol {
 
   implicit object GaugeJsonFormat extends RootJsonFormat[Gauge[_]] {
 

@@ -16,7 +16,7 @@ class MetricServiceActor extends Actor with MetricService {
 
 }
 
-trait MetricService extends HttpService with SprayJsonSupport with DefaultJsonProtocol with MetricsJsonProtocol with Instrumented {
+trait MetricService extends HttpService with SprayJsonSupport with MetricsJsonProtocol with Instrumented {
 
   metrics.timer("test")
 
